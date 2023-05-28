@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解構賦值 Destructuring Assignment</title>
+</head>
+<body>
+    <script>
+        // 陣列解構值
+        let arr=[3,4,5,2];
+        /*
+        let d1=arr[0];
+        let d2=arr[1];
+        let d3=arr[2];
+        let d1,d2,d3,d4;
+        [d1,d2,d3,d4=10]=arr;   // 如果d4沒有資料會使用預設值"10",有資料則使用資料
+        console.log(d1,d2,d3,d4);
+        */
+        // 變數資料交換
+        /*
+        let n1=3;
+        let n2=4;
+        [n2,n1]=[n1,n2];
+        console.log(n1,n2);
+        */
+        
+        // 物件解構賦值
+        /*
+        let obj={x:3,y:4,z:5};
+        let x=obj.x;
+        let y=obj.y;
+        
+       // let {x,y,z}=obj;
+        let newX,newY,newZ;
+        ({x:newX,y:newY,z:newZ=10}=obj);    // 如果Z沒有資料會使用預設值"10",有資料則使用資料
+        console.log(newX,newY,newZ);
+        */
+        
+        // 統整函式的物件參數
+        function add(n1,n2){           
+            console.log(n1+n2);
+        }
+        add(3,4);   
+        // 另寫法
+        function add(args){           // args 是一個物件
+            console.log(args.n1+args.n2);
+        }
+        add({n1:3,n2:4});   
+        // 另寫法 解構賦值
+        function add({n1,n2}){           // {}加一組大括號,直接把物件參數寫進去
+            console.log(n1+n2);
+        }
+        add({n1:3,n2:4});   
+    </script>
+    
+</body>
+</html>
