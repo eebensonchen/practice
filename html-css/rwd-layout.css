@@ -1,0 +1,46 @@
+.headline{
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:15px;
+    text-align:center;
+}
+.desktop-menu{
+    text-align:center;
+    display:block;
+}
+.mobile-menu{
+    text-align:center;
+    display:none;
+}
+.list{   /*  原始設定  */
+    display:flex;
+    justify-content:center;
+}
+.product{
+    flex:none;
+    width:280px;
+    margin:10px;
+    background-color:#ffcccc;
+}
+
+@media (max-width:1250px){  /*  桌機螢幕寬度最小約1250px  */  /*  平板  */
+    /*  螢幕寬度小於 1250px, 套用這個區塊的 CSS  */
+    .list{
+        flex-wrap:wrap;
+    }
+    .product{
+        width:45%;
+    }
+}
+
+@media (max-width:500px){  /*  手機,手機最小360px  */
+    /*  螢幕寬度小於 500px, 套用這個區塊的 CSS  */
+    .headline{
+        font-size:20px;
+    }
+    .desktop-menu{display:none;}
+    .mobile-menu{display:block;}
+    .product{
+        width:90%;
+    }
+}
